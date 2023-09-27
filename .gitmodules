@@ -1,0 +1,3 @@
+[submodule "public/minecraft-gradient"]
+	path = public/minecraft-gradient
+	url = git@gitlab.com:keiidev/minecraft-gradient
