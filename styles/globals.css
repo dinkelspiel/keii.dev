@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+body
+{
+    background-color: #181818;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+* 
+{
+  font-size: 16px;
+  font-family: 'Fira Mono', monospace;
+}
+
+a
+{
+  color: #7cafc2;
+}
+
+.container
+{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 32px;
+  width: calc(100vw - 32px);
+  margin-left: 16px;
+}
+
+h1
+{
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1::before
+{
+  color: #585858;
+  content: "# ";
+}
+
+p
+{
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+footer
+{
+  width: calc(750px);
+  margin: auto;
+  color: #b8b8b8;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    width: 100vw;
+    padding: 0px;
+    margin-left: 0;
+  }
+
+  footer
+  {
+    width: calc(100vw - 16px);
+    padding-left: 16px;
+    padding-bottom: 16px;
+    margin: auto;
+    color: #b8b8b8;
+    margin-bottom: 64px;
+  }
+}
+
+.languages {
+  display: flex;
+  flex-direction: row;
+  height: 10px;
+  width: 100%;
+}
+
+.language {
+  position: relative;
+  display: inline-block;
+}
+
+.language .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #181818;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: 5px;
+}
+
+
+.language .tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #181818 transparent;
+}
+
+.language:hover .tooltip {
+  visibility: visible;
+}
+
+.image-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-family: 'Fira Mono', monospace;
+  color: #b8b8b8;
+}

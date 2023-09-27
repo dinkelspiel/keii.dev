@@ -1,3 +1,6 @@
-[submodule "public/minecraft-gradient"]
-	path = public/minecraft-gradient
-	url = git@gitlab.com:keiidev/minecraft-gradient
+[submodule "parsedown"]
+	path = parsedown
+	url = https://github.com/erusev/parsedown.git
+[submodule "minecraft-gradient"]
+	path = minecraft-gradient
+	url = https://github.com/shykeiichi/minecraft-gradient

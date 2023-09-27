@@ -1,0 +1,82 @@
+.hecontainer
+{
+    height: 32px;
+    width: calc(750px - 32px);
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.heprimary
+{
+    height: 24px;
+    padding: 4px;
+    background-color: #a1b56c;
+    color: #000 !important;
+    min-width: 30px;
+    line-height: 28px;
+}
+
+a.heprimary
+{
+    color: #585858;
+    text-decoration: none;
+}
+
+.headerlink
+{
+    line-height: 36px;
+    text-decoration: none;
+}
+
+.headerlink::before
+{
+    content: "./ ";
+    color: #585858;
+    margin-right: -8px;
+}
+
+@media screen and (max-width: 750px) {
+    .hecontainer {
+        width: calc(100vw - 32px);
+        padding: 0 16px;
+    }
+}
+
+#heselect 
+{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+    height: 32px;
+    line-height: 32px;
+    font-weight: normal;
+    margin-top: -2px;
+    margin-left: auto;
+    text-align: right;
+    text-align: -webkit-right;
+    direction: rtl;
+    width: calc(100vw - 182px); 
+    font-size: 28px;
+}
+
+#heselect option:first-child {
+    display: none;
+    font-size: 28px;
+}
+
+/* #heselect option:not(:first-child) {
+    font-size: 16px;
+}
+   */

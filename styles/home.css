@@ -1,0 +1,19 @@
+.main 
+{
+  width: calc(750px - 32px);
+  padding: 16px;
+  background-color: #282828;
+  min-height: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #D8D8D8;
+}
+
+@media screen and (max-width: 750px) {
+  .main {
+    padding: 16px;
+    width: calc(100vw - 32px);
+  }
+}
