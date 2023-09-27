@@ -24,7 +24,7 @@
         <div class="mt-3 sm:mt-0">
             {{ $slot }}
         </div>
-        <div class="p-3 sm:p-0">
+        <div class="p-3 sm:p-0 mb-16 lg:mb-0">
             <img src="/images/logo.png" class="w-full aspect-square">
             <div class="grid grid-cols-2 h-8 py-3">
                 <a href="https://gitlab.com/keiidev">
