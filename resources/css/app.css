@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+    @apply text-link
+}
+
+.card {
+    @apply pt-3 pb-6 bg-card py-3 px-6 min-h-[35rem] flex flex-col gap-3
+}
+
+.headerlink {
+    @apply text-link cursor-pointer
+}
+
+.headerlink::before {
+    content: "./ ";
+    color: #585858;
+    margin-right: -8px;
+}
+
+h1
+{
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1::before
+{
+  color: #585858;
+  content: "# ";
+}
+
+
+
+.languages {
+display: flex;
+flex-direction: row;
+height: 10px;
+width: 100%;
+}
+
+.language {
+position: relative;
+display: inline-block;
+}
+
+.language .tooltip {
+visibility: hidden;
+width: 120px;
+background-color: #181818;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+position: absolute;
+z-index: 1;
+top: 150%;
+left: 50%;
+margin-left: -60px;
+margin-top: 5px;
+}
+
+
+.language .tooltip::after {
+content: "";
+position: absolute;
+bottom: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: transparent transparent #181818 transparent;
+}
+
+.language:hover .tooltip {
+visibility: visible;
+}
+
+.image-button {
+cursor: pointer;
+background: none;
+border: none;
+font-size: 16px;
+font-family: 'Fira Mono', monospace;
+color: #b8b8b8;
+}
