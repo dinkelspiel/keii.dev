@@ -26,13 +26,16 @@
         </div>
         <div class="p-3 sm:p-0 mb-16 lg:mb-0">
             <img src="/images/logo.png" class="w-full aspect-square">
-            <div class="grid grid-cols-2 h-8 py-3">
+            <div class="grid grid-cols-3 h-8 py-3">
                 <a href="https://gitlab.com/keiidev">
                     <img src="/images/gitlab.svg" class="h-6 py-1 w-full mx-auto cursor-pointer hover:bg-card">
                 </a>
                 <button onclick="updateDiscord()" id="discord" class="h-6 w-full cursor-pointer hover:bg-card">
                     <img src="/images/discord.svg" class="h-6 py-1 mx-auto">
                 </button>
+                <a href="https://www.youtube.com/@keiidev">
+                    <img src="/images/youtube.svg" class="h-6 py-1 w-full mx-auto cursor-pointer hover:bg-card">
+                </a>
             </div>
         </div>
     </div>
