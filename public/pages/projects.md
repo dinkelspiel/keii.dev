@@ -1,7 +1,17 @@
 # Projects
 
-# Gatekeeper
+# Matte 5000
+September 2023
 
+A simple way for students in my highschool grade to compete for who has completed the most math problems in our mathematics book.
+
+The project uses Laravel for the frontend and backend, Tailwind CSS as the css framework, MySQL for storing data and LDAP to connect to our schools infrastructure for login.
+
+images=matte5000.png
+
+languages=keiidev/medialog
+
+# Gatekeeper
 August 2023 - Present
 
 A simple way to have a player invites player structured whitelist for minecraft survival servers.
@@ -11,7 +21,6 @@ Gatekeeper is made for Minecraft: Java Edition and is created for friend groups 
 languages=keiidev/gatekeeper
 
 # Chunks
-
 August 2023 - Present
 
 A claim plugin based on FTB Chunks
