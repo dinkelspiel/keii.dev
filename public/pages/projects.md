@@ -36,6 +36,14 @@ An invite only restaurant guide with restaurant recommendations you can trust bu
 
 images=chiquis.png
 
+App:
+
+<div class="languages"><div style="flex: 100% 1; background-color: #F05138;" class="language"><span class="tooltip">Swift</span></div></div>
+
+Api:
+
+<div class="languages"><div style="flex: 82.61% 1; background-color: #4F5D95;" class="language"><span class="tooltip">PHP</span></div><div style="flex: 16.51% 1; background-color: #f7523f;" class="language"><span class="tooltip">Blade</span></div><div style="flex: 0.88% 1; background-color: #f1e05a;" class="language"><span class="tooltip">JavaScript</span></div></div>
+
 # QRTag
 December 2022 - Present
 
