@@ -12,7 +12,7 @@
                 [keiidev] $
             </a>
             <a class="headerlink" href="/">
-                home
+                about
             </a>
             <a class="headerlink" href="/blog">
                 blog

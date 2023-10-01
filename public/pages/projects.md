@@ -29,6 +29,13 @@ images=chunks.png
 
 languages=keiidev/chunks
 
+# Chiquis
+June 2023 - Present
+
+An invite only restaurant guide with restaurant recommendations you can trust built using Swift and SwiftUI for the frontend and Laravel for the backend.
+
+images=chiquis.png
+
 # QRTag
 December 2022 - Present
 
