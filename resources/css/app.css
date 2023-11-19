@@ -2,88 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
-    @apply text-link
+.border-b-expand { 
+    display:inline-block; 
+    margin:0; 
+}
+.border-b-expand:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.border-b-expand:hover:after { 
+    transform: scaleX(1); 
 }
 
-.card {
-    @apply pt-3 pb-6 bg-card py-3 px-6 min-h-[35rem] flex flex-col gap-3
+.projects-container {
+    position: relative;
+    overflow: hidden;
+    @apply bg-red;
 }
 
-.headerlink {
-    @apply text-link cursor-pointer
+.projects-image {
+    position: absolute;
+    rotate: 8deg;
+    border-radius: 24px;
+    object-fit: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: all;
+    transition-duration: 300ms;
+    
+    --hover-distance: 24px;
 }
 
-.headerlink::before {
-    content: "./ ";
-    color: #585858;
-    margin-right: -8px;
+.projects-container:hover .projects-image-1 {
+    transform: translateY(calc(var(--hover-distance) * -1));
 }
 
-h1
-{
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0;
+.projects-container:hover .projects-image-2 {
+    transform: translateX(calc(var(--hover-distance) * -1));
 }
 
-h1::before
-{
-  color: #585858;
-  content: "# ";
+.projects-container:hover .projects-image-3 {
+    transform: translateX(var(--hover-distance));
 }
 
-
-
-.languages {
-display: flex;
-flex-direction: row;
-height: 10px;
-width: 100%;
+.projects-container:hover .projects-image-4 {
+    transform: translateY(var(--hover-distance));
 }
 
-.language {
-position: relative;
-display: inline-block;
+.projects-image-1 {
+    width: 629px;
+    height: 315px;
+    object-position: 0%;
+    right: -80px;
+    top: 55px;
 }
 
-.language .tooltip {
-visibility: hidden;
-width: 120px;
-background-color: #181818;
-color: #fff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 0;
-position: absolute;
-z-index: 1;
-top: 150%;
-left: 50%;
-margin-left: -60px;
-margin-top: 5px;
+.projects-image-2 {
+    width: 629px;
+    height: 315px;
+    object-position: 100%;
+    left: -190px;
+    top: 380px;
 }
 
-
-.language .tooltip::after {
-content: "";
-position: absolute;
-bottom: 100%;
-left: 50%;
-margin-left: -5px;
-border-width: 5px;
-border-style: solid;
-border-color: transparent transparent #181818 transparent;
+.projects-image-3 {
+    width: 293.5px;
+    height: 439.12px;
+    object-position: 100%;
+    right: -140px;
+    top: 440px;
 }
 
-.language:hover .tooltip {
-visibility: visible;
-}
-
-.image-button {
-cursor: pointer;
-background: none;
-border: none;
-font-size: 16px;
-font-family: 'Fira Mono', monospace;
-color: #b8b8b8;
+.projects-image-4 {
+    width: 448.66px;
+    height: 252.35px;
+    object-position: 100%;
+    left: -193px;
+    top: 745px;
 }
