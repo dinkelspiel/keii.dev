@@ -1,5 +1,5 @@
 <div class="bg-[#f7eff0] w-screen pb-12 font-poppins">
-    <div class="grid grid-cols-[1fr,1fr,1fr] px-64 py-16 items-center">
+    <div class="grid grid-cols-[1fr,1fr,1fr] px-8 xl:px-64 py-16 items-center">
         <h1 class="w-full font-agbalumo text-3xl">
             Keii
         </h1>
@@ -20,18 +20,31 @@
             Contact
         </div>
     </div>
-    <div class="grid grid-cols-4 gap-6 w-[2048px] mx-auto">
+    <div class="grid grid-cols-2 xl:grid-cols-4 gap-6 w-screen min-[2048px]:w-[2048px] 2xl:p-64 mx-auto">
         <x-card class="col-span-2 text-[22px] flex flex-col gap-10 font-medium justify-center">
             <img src="/assets/logo.webp" class="aspect-square w-64 rounded-2xl">
             <div class="leading-9">
-                I'm <span class="font-agbalumo font-semibold text-3xl bg-gradient-to-r from-red via-blue to-green text-transparent bg-clip-text">Willem</span>, a Swedish computer science student who has a philosophy of learning atleast one new technology or tool for each project I make so that I always have something new to work on. If you're interested in my finished projects then you can always looks in <x-a href="/projects">/projects</x-a>.
+                I'm <span class="font-agbalumo font-semibold text-3xl bg-gradient-to-r from-red via-blue to-green text-transparent bg-clip-text">Willem</span>, a Swedish computer science student who has a philosophy of learning atleast one new technology or tool for each project I make so that I always have something new to learn. If you're interested in my finished projects then you can always looks in <x-a href="/projects">/projects</x-a>.
             </div>
         </x-card>
         <x-card>
 
         </x-card>
         <x-card class="row-span-2">
+            @php
+                $response = Http::withHeaders([
+                    'PRIVATE-TOKEN' => env('GITLAB_PAT')
+                ])->get('https://gitlab.com/api/v4/users/4008654/events?action=pushed');
 
+                if ($response->successful()) {
+                    $events = $response->json();
+                    // Process or return the events data
+                    dd(response()->json($events));
+                } else {
+                    // Handle the error
+                    dd(response()->json(['error' => 'Unable to fetch events'], 500));
+                }
+            @endphp
         </x-card>
 
         <x-card>
