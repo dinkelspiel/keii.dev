@@ -39,10 +39,10 @@
                 if ($response->successful()) {
                     $events = $response->json();
                     // Process or return the events data
-                    dd(response()->json($events));
+                    //(response()->json($events));
                 } else {
                     // Handle the error
-                    dd(response()->json(['error' => 'Unable to fetch events'], 500));
+                    //dd(response()->json(['error' => 'Unable to fetch events'], 500));
                 }
             @endphp
         </x-card>
