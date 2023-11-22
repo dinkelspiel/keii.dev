@@ -108,3 +108,24 @@
 .gitlab-repo:hover {
     gap: 1rem;
 }
+
+
+.markdown h1 {
+    @apply text-2xl font-semibold border-s-4 border-s-black ps-4 mb-4;
+}
+
+.markdown h2 {
+    @apply text-2xl font-semibold mb-4;
+}
+
+.markdown h3 {
+    @apply text-lg font-semibold mb-2;
+}
+
+.markdown img {
+    @apply py-3 rounded-2xl;
+}
+
+.markdown pre {
+    @apply bg-slate-900 p-4 rounded-lg text-white my-3;
+}
