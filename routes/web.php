@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Middleware\IsAdmin;
+use App\Livewire\Admin\Blog\Create;
 use App\Livewire\Index;
+use App\Livewire\Login;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', Index::class);
+
+Route::get('/login', Login::class);
+
+Route::middleware(IsAdmin::class)->group(function() {
+    Route::redirect('/admin', '/admin/blog/create');
+    Route::get('/admin/blog/create', Create::class);
+});

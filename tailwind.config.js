@@ -14,7 +14,7 @@ export default {
       colors: {
         'bg': '#FFEBD8',
         'red': '#FFC5C5',
-        'blue': '#A7D2DC',
+        'blue': '#7FBECC',
         'green': '#C7DCA7',
         'green2': '#89B9AD'
       }

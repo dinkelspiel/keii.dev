@@ -82,3 +82,29 @@
     left: -238px;
     top: 745px;
 }
+
+
+.link-expand-button-container:hover .link-expand-button::before {
+    content: attr(data-tag);
+    padding-right: 0.75rem;
+    opacity: 1;
+}
+
+.link-expand-button-container .link-expand-button::before {
+    opacity: 0;
+    transition:1s;
+}
+
+.link-expand-button {
+    overflow-x: hidden;
+}
+
+.gitlab-repo {
+    transition: all;
+    transition-duration: 300ms;
+    position: relative;
+}
+
+.gitlab-repo:hover {
+    gap: 1rem;
+}
